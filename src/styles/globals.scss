@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap');
+
+$primary:black;
+$mobile:"568px";
+$link:gray;
+$font:"Open Sans";
+
+body {
+    margin: 0;
+    font-family: $font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .container {
+    width:90%;
+    max-width: 1300px;
+    margin:0 auto;
+
+    @media screen and (max-width:$mobile) {
+      width:100%;
+      padding:0rem 1rem;
+    }
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .wrapp {
+      flex-grow: 1;
+    }
+  }
+  
