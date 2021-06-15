@@ -4,12 +4,15 @@ import './styles/globals.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
+import {ProvideRooms} from './context/rooms/RoomsContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ProvideRooms>
+      <Router>
+        <App />
+      </Router>
+    </ProvideRooms>
   </React.StrictMode>,
   document.getElementById('root')
 );
