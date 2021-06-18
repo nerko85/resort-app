@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import {Logo, Navigation, Header} from './Navbar.style';
 import {FaAlignRight} from 'react-icons/fa'
+import logo from '../../../images/logo.svg'
 
 
 export default function Navbar() {
@@ -9,7 +10,6 @@ export default function Navbar() {
     
     const handleToggle = ()=>{
         setOpen(!isOpen);
-        console.log(isOpen)
     }
 
     return (
@@ -18,7 +18,7 @@ export default function Navbar() {
                 <div className="content">
                     <Link to='/'>
                         <Logo>
-                            <img src='/images/logo.svg' alt="Bonus resort logo"/>
+                            <img src={logo} alt="Bonus resort logo"/>
                         </Logo>
                     </Link>
                     <Navigation open={isOpen}>

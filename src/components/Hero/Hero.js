@@ -12,6 +12,6 @@ export default function Hero({children, hero, title, subtitle}) {
     )
 }
 
-Hero.defaultProps= {
+Hero.defaultProps = {
     hero:"main"
 }

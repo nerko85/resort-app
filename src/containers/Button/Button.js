@@ -9,3 +9,8 @@ export default function Button({children, type, url}) {
         </StyledButton>
     )
 }
+
+Button.defaultProps={
+    type:"primary",
+    url:"#"
+}

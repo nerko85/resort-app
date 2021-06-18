@@ -1,18 +1,21 @@
-import React, {useState} from 'react'
-import Card from '../../containers/Card';
+import React from 'react'
+import FeaturedCard from '../../containers/FeaturedCard';
 import Title from '../../containers/Title'
+import Spinner from '../../containers/Spinner'
 import {FeaturedRooms} from './Featured.style'
+import {useRooms} from '../../context/RoomContext'
 
-export default function Featured({rooms}) {
-    const featuredRooms = rooms.filter(room=>room.featured);
+export default function Featured() {
+    const {featuredRooms, loading} = useRooms()
+    const rooms = featuredRooms && featuredRooms.map(room =>(
+        <FeaturedCard key={room.id} room={room} />
+    ));
     return (
         <FeaturedRooms>
             <div className="container">
                 <Title title="Featured Rooms"/>
                 <div className="cards">
-                    {featuredRooms && featuredRooms.map(room =>(
-                        <Card key={room.id} title={room.name} img={room.images[0]} />
-                    ))}
+                    {loading? <Spinner/> : rooms}
                 </div>
             </div>
         </FeaturedRooms>

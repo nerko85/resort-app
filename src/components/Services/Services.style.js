@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Services = styled.div`
     padding:5rem 0;
     text-align:center;
-    background:orange;
+    background:#ede0ca;
 
     .cards {
         margin: 0 auto;
